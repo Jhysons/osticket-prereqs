@@ -32,14 +32,17 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <img src="https://i.imgur.com/8PL3JFl.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Download and Unzip Files: Get the osTicket-Installation-Files.zipand unzip it on your desktop.
+Create an Azure VM: Set up a Windows 10 VM with 4 vCPUs.
+
+Log in via Remote Desktop: Use the credentials provided to log in.
+
+Download and Unzip Files: Download osTicket-Installation-Files.zip and unzip it on the desktop.
+
 Install IIS with CGI: Enable IIS and CGI in Windows.
-Install PHP Manager: From the installation files, install PHP Manager for IIS.
-Install Rewrite Module: Install the Rewrite Module from the installation files.
-Create PHP Directory: Create a directory at C:\PHP.
-Unzip PHP: Unzip PHP 7.3.8 into the C:\PHP folder.
-Install VC_redist: Install the VC_redist.x86.exe from the installation files.
-Install MySQL: Install MySQL 5.5.62 and configure it  
+
+Install PHP Manager and Rewrite Module: From the unzipped folder, install PHP Manager for IIS and the Rewrite Module.
+
+Set Up PHP: Create a directory C:\PHP and unzip PHP 7.3.8 into it. Install VC_redist.x86.exe.  
 </p>
 <br />
 
@@ -47,14 +50,17 @@ Install MySQL: Install MySQL 5.5.62 and configure it
 <img src="https://i.imgur.com/FutvlVL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Open IIS: Run IIS as an Admin.
-Register PHP in IIS: Use PHP Manager to register C:\PHP\php-cgi.exe.
-Reload IIS: Stop and start the IIS server.
-Install osTicket: Unzip osTicket v1.15.8 and move the upload folder to C:\inetpub\wwwroot, then rename it to osTicket.
-Reload IIS: Stop and start the IIS server again.
-Browse osTicket: Go to sites -> Default -> osTicket and click "Browse *:80".
-Enable PHP Extensions: Enable php_imap.dll, php_intl.dll, and php_opcache.dll in PHP Manager.
-Rename Config File: Rename ost-sampleconfig.php to ost-config.php in the include directory.  
+Create an Azure VM: Set up a Windows 10 VM with 4 vCPUs.
+
+Log in via Remote Desktop: Use the credentials provided to log in.
+
+Download and Unzip Files: Download osTicket-Installation-Files.zip and unzip it on the desktop.
+
+Install IIS with CGI: Enable IIS and CGI in Windows.
+
+Install PHP Manager and Rewrite Module: From the unzipped folder, install PHP Manager for IIS and the Rewrite Module.
+
+Set Up PHP: Create a directory C:\PHP and unzip PHP 7.3.8 into it. Install VC_redist.x86.exe. 
 </p>
 <br />
 
@@ -63,11 +69,8 @@ Rename Config File: Rename ost-sampleconfig.php to ost-config.php in the include
 </p>
 <p>
 
-Set Permissions: Disable inheritance and set new permissions for ost-config.php.
-Continue Setup in Browser: Complete the setup in the browser, providing helpdesk name and default email.
-nstall HeidiSQL: Install HeidiSQL and create a new session with root/root.
-Create Database: Create a database named osTicket.
-Finish Setup: Complete the osTicket setup in the browser with the database details and click "Install Now!".
-Clean Up: Delete the setup directory and set ost-config.php to read-only.  
+Set Up Database: Use HeidiSQL to create a database called osTicket.
+
+Finalize Installation: Complete the setup in the browser and clean up by deleting the setup folder and setting permissions to read-only for ost-config.php.  
 </p>
 <br />
